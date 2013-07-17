@@ -10,8 +10,6 @@ $active_list_height: 500px;
   position: relative;
   margin: 30px;
   margin-right: 30px;
-  // border: 1px solid black;
-  // overflow: hidden;
 }
 
 #week div {
@@ -19,7 +17,7 @@ $active_list_height: 500px;
   height: $list_height;
   position: absolute;
   background-color: gray;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 #week div.active {
@@ -27,15 +25,6 @@ $active_list_height: 500px;
   height: $active_list_height;
   opacity: 0.5;
 }
-
-// default
-.monday #monday { }
-.monday #tuesday {}
-.monday #wednesday {}
-.monday #thursday {}
-.monday #friday {}
-.monday #saturday {}
-.monday #sunday {}
 
 // tuesday
 .tuesday #tuesday {
