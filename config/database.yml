@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: Project_Two_development
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Project_Two_test
+  pool: 5
+  username: tomgalpin
+  host: localhost
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Project_Two_production
+  pool: 5
+  username: tomgalpin
+  password:
