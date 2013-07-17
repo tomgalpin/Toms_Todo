@@ -19,11 +19,126 @@ $active_list_height: 500px;
   height: $list_height;
   position: absolute;
   background-color: gray;
+  border-radius: 5px;
 }
 
 #week div.active {
   width: $active_list_width;
   height: $active_list_height;
+  opacity: 0.5;
+}
+
+// default
+.monday #monday { }
+.monday #tuesday {}
+.monday #wednesday {}
+.monday #thursday {}
+.monday #friday {}
+.monday #saturday {}
+.monday #sunday {}
+
+// tuesday
+.tuesday #tuesday {
+  left: 202px;
+}
+.tuesday #wednesday {
+  left: 0px;
+}
+
+// wednesday
+.wednesday #tuesday {
+  left: 0px;
+  top: 260px;
+}
+.wednesday #wednesday {
+  top: 0px;
+  left: 202px;
+}
+
+// thursday
+.thursday #tuesday {
+  left: 0px;
+  top: 260px;
+}
+.thursday #wednesday {
+  left: 202px;
+  top: 0px;
+}
+.thursday #thursday {
+  left: 404px;
+}
+.thursday #friday {
+  left: 202px;
+  top: 260px;
+}
+
+// friday
+.friday #tuesday {
+  left: 0px;
+  top: 260px;
+}
+.friday #wednesday {
+  left: 202px;
+  top: 0px;
+}
+.friday #thursday {
+  left: 202px;
+  top: 260px;
+}
+.friday #friday {
+  left: 404px;
+  top: 0px;
+}
+
+// saturday
+.saturday #tuesday {
+  left: 0px;
+  top: 260px;
+}
+.saturday #wednesday {
+  left: 202px;
+  top: 0px;
+}
+.saturday #thursday {
+  left: 202px;
+  top: 260px;
+}
+.saturday #friday {
+  left: 404px;
+  top: 0px;
+}
+.saturday #saturday {
+  left: 606px;
+}
+.saturday #sunday {
+  left: 404px;
+  top: 260px;
+}
+
+// sunday
+.sunday #tuesday {
+  left: 0px;
+  top: 260px;
+}
+.sunday #wednesday {
+  left: 202px;
+  top: 0px;
+}
+.sunday #thursday {
+  left: 202px;
+  top: 260px;
+}
+.sunday #friday {
+  left: 404px;
+  top: 0px;
+}
+.sunday #saturday {
+  left: 404px;
+  top: 260px;
+}
+.sunday #sunday {
+  left: 606px;
+  top: 0px;
 }
 
 
