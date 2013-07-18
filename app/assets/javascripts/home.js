@@ -1,70 +1,46 @@
 $(document).ready(function(){
 
-  var remove_active = function() {
-    $('#week div').removeClass('active');
+  var container = $('#week');
+  var days = $('.day');
+  var card_class = $('.day').children(':first');
+  var flip_button = $('.flip_button');
+
+  // show button
+  var show_button = function(this_div) {
+    $(this_div).prepend(flip_button);
   };
 
-  // var add_active = function() {
-  //   $.addClass('active');
-  // };
+  $('.flip_button').on('click',function(){
+        $(this)
+          .parent()
+          .find('.card')
+          .addClass('flipped');
 
-  var change_weekday = function(day) {
-    $('#week').removeClass().addClass(day);
+        $(this).hide();
+  });
+
+  // change days
+  var day_changer = function() {
+    var day_div = $(this);
+    var day_id = day_div.attr('id');
+
+    // 1) remove the day class from week
+    container.removeClass().addClass(day_id);
+    // 2) remove the active class from any days that have it
+    days.removeClass('active');
+    // 3) add the active class to the one that was just clicked
+    day_div.addClass('active');
+
+    show_button(day_div);
   };
 
-  // var click_day = function(day) {
-  //   $('#day').on('click', function() {
-  //     change_weekday('day');
-  //     remove_active();
-  //     $('#day').addClass('active');
-  //   });
-  // };
+  // initialize
+  var initialize = function() {
+    for (i=0; i<=days.length; i++) {
+      $(days[i]).on('click', day_changer);
+    }
+  };
 
-  ///////////////////////////////////////////
-
-  $('#monday').on('click', function() {
-    change_weekday('monday');
-    remove_active();
-    $('#monday').addClass('active');
-  });
-
-  $('#tuesday').on('click', function() {
-    change_weekday('tuesday');
-    remove_active();
-    $('#tuesday').addClass('active');
-  });
-
-  $('#wednesday').on('click', function() {
-    change_weekday('wednesday');
-    remove_active();
-    $('#wednesday').addClass('active');
-  });
-
-  $('#thursday').on('click', function() {
-    change_weekday('thursday');
-    remove_active();
-    $('#thursday').addClass('active');
-  });
-
-  $('#friday').on('click', function() {
-    change_weekday('friday');
-    remove_active();
-    $('#friday').addClass('active');
-  });
-
-  $('#saturday').on('click', function() {
-    change_weekday('saturday');
-    remove_active();
-    $('#saturday').addClass('active');
-  });
-
-  $('#sunday').on('click', function() {
-    change_weekday('sunday');
-    remove_active();
-    $('#sunday').addClass('active');
-  });
-
-
-
+  initialize();
 
 }); // end

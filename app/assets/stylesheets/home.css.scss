@@ -12,18 +12,19 @@ $active_list_height: 500px;
   margin-right: 30px;
 }
 
-#week div {
+#week div.day {
   width: $list_width;
   height: $list_height;
   position: absolute;
   background-color: gray;
   border-radius: 7px;
+  overflow: hidden;
+  // opacity: 0.8;
 }
 
 #week div.active {
   width: $active_list_width;
   height: $active_list_height;
-  opacity: 0.5;
 }
 
 // tuesday
@@ -129,5 +130,6 @@ $active_list_height: 500px;
   left: 606px;
   top: 0px;
 }
+
 
 

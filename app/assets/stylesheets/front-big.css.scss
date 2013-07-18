@@ -1,0 +1,32 @@
+.banner {
+  width: 100%;
+  height: 80px;
+  margin: 0px;
+  background-color: rgba(52, 73, 94,1.0);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  line-height: 80px;
+  // opacity: 0.7;
+}
+
+.banner h3 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  font-size: 40px;
+  font-family: Helvetica;
+}
+
+.list_body {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+.list_footer {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(52, 73, 94,1.0);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  // opacity: 0.7;
+}
