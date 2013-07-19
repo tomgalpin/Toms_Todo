@@ -4,6 +4,7 @@ $(document).ready(function(){
   var days = $('.day');
   var card_class = $('.day').children(':first');
   var flip_icon = $('#flip_icon');
+  var flip_back_icon = $('#flip_back_icon');
 
   // show button
   var show_button = function(this_div) {
@@ -16,8 +17,12 @@ $(document).ready(function(){
         //   .parent()
         //   .find('.card')
           card_class.addClass('flipped');
+  });
 
-        $(this).hide();
+  // remove class 'flipped' to card to flip back
+
+  flip_back_icon.on('click', function() {
+    card_class.removeClass('flipped');
   });
 
   // change days
