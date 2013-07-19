@@ -4,7 +4,7 @@ $list_height: 240px;
 $active_list_width: 500px;
 $active_list_height: 500px;
 
-$card_background_color: gray;
+$card_background_color: rgba(236, 240, 241,1.0);
 
 #week {
   width: 1097px;
@@ -20,7 +20,7 @@ $card_background_color: gray;
   position: absolute;
   background-color: $card_background_color;
   border-radius: 7px;
-  // overflow: hidden;
+  // overflow: hidden; Maybe keep this. ****************
 }
 
 #week div.active {
@@ -29,6 +29,7 @@ $card_background_color: gray;
 }
 
 // Movements of divs after .active is added (Monday is default);
+
 // tuesday
 .tuesday #tuesday {
   left: 202px;
