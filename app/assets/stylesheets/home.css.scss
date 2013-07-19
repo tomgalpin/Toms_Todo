@@ -4,12 +4,7 @@ $list_height: 240px;
 $active_list_width: 500px;
 $active_list_height: 500px;
 
-// body {
-//   background-color: gray;
-//   border: 0;
-//   padding: 0;
-
-// }
+$card_background_color: gray;
 
 #week {
   width: 1097px;
@@ -23,10 +18,9 @@ $active_list_height: 500px;
   width: $list_width;
   height: $list_height;
   position: absolute;
-  background-color: gray;
+  background-color: $card_background_color;
   border-radius: 7px;
-  overflow: hidden;
-  // opacity: 0.8;
+  // overflow: hidden;
 }
 
 #week div.active {
@@ -34,6 +28,7 @@ $active_list_height: 500px;
   height: $active_list_height;
 }
 
+// Movements of divs after .active is added (Monday is default);
 // tuesday
 .tuesday #tuesday {
   left: 202px;

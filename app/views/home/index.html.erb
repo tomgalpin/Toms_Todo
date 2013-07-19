@@ -1,248 +1,33 @@
 <div id="week" class="monday">
 
   <div id="monday" class="flip day active">
-      <div class="card">
-        <div class="face front">
-
-          <div class="banner">
-            <h3>Monday</h3>
-          </div> <!-- class="banner" -->
-
-          <div class="list_body">
-
-              <ul id="sortable">
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 1
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 2
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 3
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 4
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 5
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-
-                <li class="list ui-state-default">
-
-                  <div class="task_text">
-                    Item 6
-                  </div>
-
-                  <div class="task_check">
-                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-                  </div>
-
-                  <div class="task_delete">
-                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-                  </div>
-
-                </li>
-              </ul>
-
-          </div> <!--"list_body"-->
-
-          <div class="list_footer">
-            <div class="big_footer_left">
-            </div>
-            <div class="big_footer_center">
-            </div>
-            <div class="big_footer_right">
-              <%= image_tag("gray/info_24.png", :id=> "flip_icon") %>
-            </div>
-
-
-          </div> <!--"list_footer"-->
-      </div> <!-- class="front face" -->
-      <div class="face back">
-
-        <div class="back_banner">
-
-          <!-- <h3>Back</h3> -->
-        </div> <!-- class="banner" -->
-
-        <!-- back list body -->
-        <div class="back_list_body">
-
-          <div id="login-signup_div">
-          </div>
-
-          <div id="save_lists_div">
-          </div>
-
-          <div id="color_theme_div">
-          </div>
-
-        </div> <!-- class="back_list_body" -->
-
-
-        <div class="back_list_footer">
-          <div class="big_footer_left">
-          </div>
-          <div class="big_footer_center">
-          </div>
-          <div class="big_footer_right">
-            <%= image_tag("gray/arrow_circle_left_24.png", :id=> "flip_back_icon") %>
-          </div>
-        </div> <!--"list_footer"-->
-      </div> <!-- class="face back" -->
-
-    </div> <!-- class="card" -->
+    <!-- if class is active, the render 'big_list' -->
+    <%= render "big_list" %>
+      <!-- else render "small_list" -->
   </div> <!-- id="monday" -->
 
   <div id="tuesday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          Tuesday
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
+    <%= render "small_list" %>
   </div>
 
   <div id="wednesday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          Wednesday
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
+
   </div>
 
   <div id="thursday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          Thursday
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
+
   </div>
 
   <div id="friday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          Friday<br>
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
+
   </div>
 
   <div id="saturday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          Saturday
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
+
   </div>
 
   <div id="sunday" class="flip day">
-      <div class="card">
-        <div class="face front">
-          <div id="small_banner">
-            <h4>Sunday</h4>
-          </div>
 
-          <div id="small_body">
-              <li class="small_task_text">
-                  <p>Item 1</p>
-              </li>
-              <li class="small_task_text">
-                  <p>Item 2</p>
-              </li>
-              <li class="small_task_text">
-                  <p>Item 3</p>
-              </li>
-              <li class="small_task_text">
-                  <p>Item 4</p>
-              </li>
-              <li id="last_small_list" class="small_task_text">
-                  <p>Item 5</p>
-              </li>
-
-          </div>
-        </div>
-        <div class="face back">
-          Back
-        </div>
-      </div>
   </div>
 
 </div> <!-- id="week" -->
