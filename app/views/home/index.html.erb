@@ -10,29 +10,140 @@
 
           <div class="list_body">
 
-              <div id="sortable">
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
-                <li class="list ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
-              </div>
+              <ul id="sortable">
+                <li class="list ui-state-default">
 
+                  <div class="task_text">
+                    Item 1
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+
+                <li class="list ui-state-default">
+
+                  <div class="task_text">
+                    Item 2
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+
+                <li class="list ui-state-default">
+
+                  <div class="task_text">
+                    Item 3
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+
+                <li class="list ui-state-default">
+
+                  <div class="task_text">
+                    Item 4
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+
+                <li class="list ui-state-default">
+
+                  <div class="task_text">
+                    Item 5
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+
+                <li class="list ui-state-default">
+
+                  <div class="task_text">
+                    Item 6
+                  </div>
+
+                  <div class="task_check">
+                    <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                  </div>
+
+                  <div class="task_delete">
+                    <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                  </div>
+
+                </li>
+              </ul>
 
           </div> <!--"list_body"-->
 
           <div class="list_footer">
+            <div class="big_footer_left">
+            </div>
+            <div class="big_footer_center">
+            </div>
+            <div class="big_footer_right">
+              <%= image_tag("gray/info_24.png", :id=> "flip_icon") %>
+            </div>
+
+
           </div> <!--"list_footer"-->
-
-        <!-- <button class="flip_button">Flip</button>-->
-
-        <div class="face back">
-          Back
-        </div> <!-- class="face back" -->
-
       </div> <!-- class="front face" -->
+      <div class="face back">
+
+        <div class="back_banner">
+
+          <!-- <h3>Back</h3> -->
+        </div> <!-- class="banner" -->
+
+        <div class="back_list_body">
+        </div>
+
+
+        <div class="back_list_footer">
+          <div class="big_footer_left">
+          </div>
+          <div class="big_footer_center">
+          </div>
+          <div class="big_footer_right">
+            <%= image_tag("gray/info_24.png", :id=> "flip_icon") %>
+          </div>
+        </div> <!--"list_footer"-->
+      </div> <!-- class="face back" -->
+
     </div> <!-- class="card" -->
   </div> <!-- id="monday" -->
 

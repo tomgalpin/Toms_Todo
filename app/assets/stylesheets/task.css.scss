@@ -1,5 +1,5 @@
 .list {
-  width: 100%;
+  width: 500px;
   height: 50px;
 
   // opacity: 0.;
@@ -21,11 +21,11 @@
 #sortable {
   list-style-type: none;
   // margin-left: -5px;
-  // margin-top: 0px;
+  margin-top: 0px;
   // margin-bottom: -5px;
   padding: 0;
   width: 100%;
-  line-height: 40px;
+  line-height: 50px;
 }
 #sortable li {
   color: white;
@@ -40,4 +40,27 @@
 #sortable li span {
   position: absolute;
   margin-left: -1.3em;
+}
+
+// task icons
+
+.task_text {
+  float: left;
+  width: 72%;
+}
+
+.task_check,
+.task_delete {
+  height: 100%;
+  width: 8%;
+  display: inline-block;
+}
+
+// .task_delete {
+//   margin-right: 60px;
+// }
+
+.check_icon,
+.delete_icon {
+  margin-top: 15px;
 }

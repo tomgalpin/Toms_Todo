@@ -3,18 +3,19 @@ $(document).ready(function(){
   var container = $('#week');
   var days = $('.day');
   var card_class = $('.day').children(':first');
-  var flip_button = $('.flip_button');
+  var flip_icon = $('#flip_icon');
 
   // show button
   var show_button = function(this_div) {
-    $(this_div).prepend(flip_button);
+    $(this_div).prepend(flip_icon);
   };
 
-  $('.flip_button').on('click',function(){
-        $(this)
-          .parent()
-          .find('.card')
-          .addClass('flipped');
+  // add class 'flipped' to card (flips div)
+  flip_icon.on('click',function(){
+        // $(this)
+        //   .parent()
+        //   .find('.card')
+          card_class.addClass('flipped');
 
         $(this).hide();
   });
@@ -31,7 +32,7 @@ $(document).ready(function(){
     // 3) add the active class to the one that was just clicked
     day_div.addClass('active');
 
-    show_button(day_div);
+    // show_button(day_div);
   };
 
   // initialize
