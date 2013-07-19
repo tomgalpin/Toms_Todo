@@ -1,0 +1,48 @@
+#small_banner {
+  width: 101%;
+  height: 25%;
+  background-color: rgba(52, 73, 94,1.0);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  line-height: 60px;
+}
+
+#small_banner h4 {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  font-size: 25px;
+  font-family: Helvetica;
+}
+
+.small_task_text {
+  width: 183px;
+  height: 36px;
+
+  line-height: 36px;
+
+  list-style: none;
+
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
+    -moz-box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
+    box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
+    background-image: -webkit-linear-gradient(bottom, #1082f8, #1c96fd);
+    background-image: -moz-linear-gradient(bottom, #1082f8, #1c96fd);
+    background-image: -o-linear-gradient(bottom, #1082f8, #1c96fd);
+    background-image: -ms-linear-gradient(bottom, #1082f8, #1c96fd);
+    background-image: linear-gradient(to top, #1082f8, #1c96fd);
+}
+
+.small_task_text p {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+#last_small_list {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+

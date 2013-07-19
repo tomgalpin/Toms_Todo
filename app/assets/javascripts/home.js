@@ -36,6 +36,10 @@ $(document).ready(function(){
     days.removeClass('active');
     // 3) add the active class to the one that was just clicked
     day_div.addClass('active');
+    // remove 'flipped' from 'card' to flip back if on back of card
+    // this doesn't work:::
+    // $('.card').removeClass('flipped');
+
 
     // show_button(day_div);
   };
