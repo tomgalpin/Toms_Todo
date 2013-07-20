@@ -1,13 +1,75 @@
-// #login-signup_div,
-// #save_lists_div,
-// #color_theme_div {
-//   margin: auto;
-//   width: 80%;
-//   height: 120px;
-//   border: 15px solid black;
-//   background-color: rgba(236, 240, 241,1.0);
-// }
+$back_body_background_color: rgba(149, 165, 166,1.0);
+$font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 
-// #login-signup_div {
-//   margin-top: -30px;
-// }
+.back_list_body {
+  background-color: $back_body_background_color;
+  width: 100%;
+  height: 380px;
+  display: inline-block;
+}
+
+#back_list_body_inside {
+  height: 360px;
+}
+
+#login-signup_div,
+#save_lists_div,
+#color_theme_div {
+  margin: auto;
+  width: 80%;
+  // border: 1px solid black;
+  // background-color: rgba(236, 240, 241,1.0);
+}
+
+#login-signup_div {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  height: 120px;
+}
+
+#login-signup_button {
+  margin: 15px auto;
+  border: 10px solid rgba(41, 128, 185,1.0);
+  border-radius: 7px;
+  width: 80%;
+  height: 70px;
+  line-height: 70px;
+  background-color: rgba(52, 152, 219,1.0);
+   -moz-box-shadow: 3px 12px 75px #000000;
+   -webkit-box-shadow: 3px 12px 75px #000000;
+   box-shadow: 3px 12px 75px #000000;
+}
+
+#login-signup_button p,
+#save_list_button p {
+  text-align: center;
+  font-family: $font;
+  margin: 0;
+  font-size: 30px;
+  color: white;
+}
+
+#save_list_button p {
+  font-size: 20px;
+}
+
+#save_lists_div {
+  height: 80px;
+}
+
+#color_theme_div {
+  height: 120px;
+}
+
+#save_list_button {
+  margin: 10px auto;
+  height: 40px;
+  width: 60%;
+  border-radius: 7px;
+  border: 10px solid rgba(41, 128, 185,1.0);
+  line-height: 40px;
+  background-color: rgba(52, 152, 219,1.0);
+  -moz-box-shadow: 3px 12px 75px #000000;
+  -webkit-box-shadow: 3px 12px 75px #000000;
+  box-shadow: 3px 12px 75px #000000;
+}

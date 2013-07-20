@@ -2,7 +2,7 @@
     <div class="face front">
 
       <div class="banner">
-        <h3><%= "Insert Ruby/JS for DoW" %></h3>
+        <h3 class="day_header"><%= day_of_week %></h3>
       </div> <!-- class="banner" -->
 
       <div class="list_body">
@@ -122,17 +122,25 @@
   <div class="face back">
 
     <div class="back_banner">
-
-      <!-- <h3>Back</h3> -->
     </div> <!-- class="banner" -->
 
     <!-- back list body -->
     <div class="back_list_body">
 
+      <div id="back_list_body_inside">
+
       <div id="login-signup_div">
+        <div id="login-signup_button">
+          <p>Sign-Up and Log-In</p>
+        </div>
+        <div id="logout">
+        </div>
       </div>
 
       <div id="save_lists_div">
+        <div id="save_list_button">
+          <p>Save Today's To Do</p>
+        </div>
       </div>
 
       <div id="color_theme_div">
