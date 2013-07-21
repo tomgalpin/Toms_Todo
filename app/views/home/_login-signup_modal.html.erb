@@ -1,0 +1,81 @@
+<div class="modal_wrap">
+
+  <div class="modal_overlay">
+    modaloverlay
+  </div> <!--modal_overlay-->
+
+  <div class="vertical-offset">
+    <div class="modal_box">
+      <%= image_tag("modal_close.png", :id=> "close_modal") %>
+
+      <div id="signup_page">
+
+        <div id="signup_forms">
+          <%= form_for @user do |f| %>
+
+            <div class="field">
+              <%= f.label :username %><br>
+              <%= f.text_field :username %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.label :email %><br>
+              <%= f.text_field :email %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.label :password %><br>
+              <%= f.password_field :password %>
+            </div>
+            <br>
+            <div class="field">
+              <%= f.label :password_confirmation %><br>
+              <%= f.password_field :password_confirmation %>
+            </div>
+            <br>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %>
+        </div> <!-- singup form -->
+
+      </div> <!-- singup_page -->
+
+      <div id="signin_page">
+
+        <div id="signin_forms">
+          <%= form_tag sessions_path do %>
+            <div class="field">
+              <%= label_tag :username %>
+              <%= text_field_tag :username, params[:username] %>
+            </div>
+            <br>
+            <div class="field">
+              <%= label_tag :email %>
+              <%= text_field_tag :email, params[:email] %>
+            </div>
+            <br>
+            <div class="field">
+              <%= label_tag :password %>
+              <%= password_field_tag :password %>
+            </div>
+            <br>
+            <div class="field">
+              <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+              <%= label_tag :remember_me %>
+            </div>
+            <br>
+            <div class="actions"><%= submit_tag "Log in" %></div>
+          <% end %>
+          <br>
+
+          <h3>Forgot Password?</h3>
+          <%= link_to 'Forgot Password?', new_password_reset_path %>
+        </div>  <!--signin form -->
+
+      </div> <!--signin_page -->
+
+    </div> <!--modal wrap-->
+  </div> <!--vertical-offset-->
+
+</div> <!--modal wrap -->

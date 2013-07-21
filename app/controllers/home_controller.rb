@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
     @days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+    @users = User.all
   end
 
   def switch_day

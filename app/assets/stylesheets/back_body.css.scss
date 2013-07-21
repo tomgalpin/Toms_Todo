@@ -29,15 +29,15 @@ $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 
 #login-signup_button {
   margin: 15px auto;
-  border: 10px solid rgba(41, 128, 185,1.0);
+  border: 7px solid rgba(41, 128, 185,1.0);
   border-radius: 7px;
   width: 80%;
   height: 70px;
   line-height: 70px;
   background-color: rgba(52, 152, 219,1.0);
-   -moz-box-shadow: 3px 12px 75px #000000;
-   -webkit-box-shadow: 3px 12px 75px #000000;
-   box-shadow: 3px 12px 75px #000000;
+  -moz-box-shadow: 1px 5px 4px #3f4161;
+  -webkit-box-shadow: 1px 5px 4px #3f4161;
+  box-shadow: 1px 5px 4px #3f4161;
 }
 
 #login-signup_button p,
@@ -47,6 +47,12 @@ $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   margin: 0;
   font-size: 30px;
   color: white;
+}
+
+#save_list_button:hover,
+#login-signup_button:hover {
+  background-color: rgba(41, 128, 185,1.0);
+  border: 5px solid rgba(52, 152, 219,1.0);
 }
 
 #save_list_button p {
@@ -66,10 +72,91 @@ $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   height: 40px;
   width: 60%;
   border-radius: 7px;
-  border: 10px solid rgba(41, 128, 185,1.0);
+  border: 7px solid rgba(41, 128, 185,1.0);
   line-height: 40px;
   background-color: rgba(52, 152, 219,1.0);
-  -moz-box-shadow: 3px 12px 75px #000000;
-  -webkit-box-shadow: 3px 12px 75px #000000;
-  box-shadow: 3px 12px 75px #000000;
+  -moz-box-shadow: 1px 5px 4px #3f4161;
+  -webkit-box-shadow: 1px 5px 4px #3f4161;
+  box-shadow: 1px 5px 4px #3f4161;
 }
+
+#color_theme_div {
+  margin-left: 100px;
+}
+
+#choose_color_title_div {
+  height: 20px;
+  width: 100%;
+  margin-bottom: -5px;
+  font-family: $font;
+  color: white;
+  font-weight: 100;
+  margin-left: 70px;
+}
+
+#choose_color_title_div p {
+  font-family: $font;
+  color: white;
+  font-weight: 100;
+}
+.color_themes {
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  margin-top: 20px;
+}
+
+.color_button {
+  width: 30px;
+  height: 100%;
+  float: left;
+  background-color: white;
+  display: inline-block;
+}
+
+#red_theme_button {
+  background-color: rgba(231, 76, 60,1.0);
+}
+
+#red_theme_button:hover {
+  background-color: rgba(192, 57, 43,1.0);
+}
+
+#black_theme_button {
+  background-color: black;
+}
+
+#black_theme_button:hover {
+  opacity: 0.5;
+}
+
+#gray_theme_button {
+  background-color: rgba(189, 195, 199,1.0);
+}
+
+#gray_theme_button:hover {
+  background-color: rgba(236, 240, 241,1.0);
+}
+
+#jony_ive_theme_button {
+  background-color: #FF00FF;
+}
+
+#jony_ive_theme_button:hover {
+  background-color: #9932CD;
+}
+
+.color_themes_text {
+  width: 90px;
+  color: white;
+  font-family: $font;
+  font-weight: 100;
+  font-size: 20px;
+  margin-top: -19px;
+  margin-left: 50px;
+}
+
+
+
+

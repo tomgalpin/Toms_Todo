@@ -37,6 +37,11 @@ $back_banner_background_color: rgba(52, 73, 94,1.0);
   // opacity: 0.5;
 }
 
+#flip_icon:hover,
+#flip_back_icon:hover {
+  opacity: 0.4;
+}
+
 #flip_back_icon {
   margin-top: 9px;
   height: 20px;
