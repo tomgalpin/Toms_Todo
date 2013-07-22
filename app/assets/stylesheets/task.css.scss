@@ -1,10 +1,7 @@
 $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 $font_weight_task: 100;
-
 $task_font_color: white;
 $background_color: rgba(52, 152, 219,1.0);
-
-
 
 .list {
   width: 500px;
@@ -40,11 +37,8 @@ $background_color: rgba(52, 152, 219,1.0);
 
 #task_content {
   width: 350px;
-  height: 35px;
-
+  height: 30px;
   margin-left: 40px;
-  margin-top: 3px;
-
 
   border: none;
   color: $task_font_color;

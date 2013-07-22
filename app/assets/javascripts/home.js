@@ -1,10 +1,10 @@
 $(document).ready(function(){
-
   window.container = $('#week');
   var days = $('.day');
   window.card_class = $('.day').children(':first');
   var flip_icon = $('#flip_icon');
   var flip_back_icon = $('#flip_back_icon');
+  var focused;
 
   // show flip_icon button
   // var show_button = function(this_div) {
@@ -74,5 +74,24 @@ $(document).ready(function(){
   };
 
   initialize();
+
+  // focuses on an event of the form submission;
+  // prevents the default of the form submission
+  // changes the css
+  // goes up the dom to the 'li', then finds the next 'input' in the next 'li'
+  $('form').on('submit', function(e){
+    e.preventDefault();
+
+    focused.css({'color':'rgb(177, 217, 245);', 'text-shadow':'0 1px 2px rgba(0,0,0,0.2)'});
+
+    focused.parent().parent().parent().next().find('input').focus();
+
+    return false;
+  });
+
+  // from the global variable set above, 'focused' changes to whatver 'this' is
+  $('form input').on('focus', function(e){
+    focused = $(this);
+  });
 
 }); // end

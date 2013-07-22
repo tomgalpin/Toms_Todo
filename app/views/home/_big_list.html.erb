@@ -8,150 +8,28 @@
       <div class="list_body">
 
           <ul id="sortable">
-            <li class="list ui-state-default">
+            <% 8.times do %>
+              <li class="list ui-state-default">
 
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
+                <div class="task_text">
+                  <%= form_for(@task) do |f| %>
+                  <%= f.text_field :content %>
+                  <% end %>
 
-                <!-- press return after entering text, replace form with text field -->
+                  <!-- press return after entering text, replace form with text field -->
 
-              </div>
+                </div>
 
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
+                <div class="task_check">
+                  <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
+                </div>
 
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
+                <div class="task_delete">
+                  <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
+                </div>
 
-            </li>
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
-            <li class="list ui-state-default">
-
-              <div class="task_text">
-                <%= form_for(@task) do |f| %>
-                <%= f.text_field :content %>
-                <% end %>
-              </div>
-
-              <div class="task_check">
-                <%= image_tag("gray/checkmark_24.png", :class=> "check_icon") %>
-              </div>
-
-              <div class="task_delete">
-                <%= image_tag("gray/delete_24.png", :class=> "delete_icon") %>
-              </div>
-
-            </li>
+              </li>
+            <% end %>
           </ul>
 
       </div> <!--"list_body"-->
