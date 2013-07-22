@@ -121,29 +121,30 @@ $(document).ready(function(){
 
   strike_through();
 
+  // this doesn't work:
+  var add_task = function() {
+    add_task_icon.on('click', function() {
+      var li = $(this).parent().parent().parent().find('.list');
+      var ul = $(this).parent().parent().parent().find('ul');
+
+      ul.append($(this).parent().parent().find('.list'));
+    });
+  };
+
+  add_task();
+
   var delete_task = function() {
     delete_icon.on('click', function() {
       var input_field = $(this).parent().parent().find('input');
 
       $(this).parent().parent().remove();
+      add_task();
     });
   };
 
   delete_task();
 
-  // this doesn't work:
-  // var add_task = function() {
-  //   add_task_icon.on('click', function() {
-  //     var li = $(this).parent().parent().parent().find('.list');
-  //     var ul = $(this).parent().parent().parent().find('ul');
-
-  //     ul.prepend(li);
-  //   });
-  // };
-
-  // add_task();
-
-  // add red-theme:
+  // add color themes
 
   var red_theme = function() {
     red_icon.on('click', function() {
@@ -177,8 +178,5 @@ $(document).ready(function(){
   gray_theme();
   black_theme();
   jony_theme();
-
-
-
 
 }); // end
