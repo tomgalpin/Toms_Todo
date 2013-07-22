@@ -1,11 +1,10 @@
 $small_banner_background_color: rgba(52, 73, 94,1.0);
 $small_banner_font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 $small_banner_font_color: white;
-$small_banner_font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 $small_task_font_color: white;
 
 #small_banner {
-  width: 101%;
+  width: 100%;
   height: 25%;
   background-color: $small_banner_background_color;
   border-top-left-radius: 7px;

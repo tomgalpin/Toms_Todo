@@ -2,21 +2,18 @@ $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 $font_weight_task: 100;
 
 $task_font_color: white;
+$background_color: rgba(52, 152, 219,1.0);
+
 
 
 .list {
-  width: 100%;
-  height: 50px;
+  width: 500px;
+  height: 53px;
+  line-height: 55px;
 
-  background-color: #fff;
-  -webkit-box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
-  -moz-box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
-  box-shadow: 0 1px rgba(102,102,102,.5), inset 0 1px 2px rgba(255,255,255,.5);
-  background-image: -webkit-linear-gradient(bottom, #1082f8, #1c96fd);
-  background-image: -moz-linear-gradient(bottom, #1082f8, #1c96fd);
-  background-image: -o-linear-gradient(bottom, #1082f8, #1c96fd);
-  background-image: -ms-linear-gradient(bottom, #1082f8, #1c96fd);
-  background-image: linear-gradient(to top, #1082f8, #1c96fd);
+  background-color: $background_color;
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
 }
 
 #sortable {
@@ -30,8 +27,6 @@ $task_font_color: white;
 #sortable li {
   color: $task_font_color;
   margin: 0px;
-  padding: 0.4em;
-  padding-left: 3em;
   font-size: 18px;
   font-family: $font;
   font-weight: $font_weight_task;
@@ -39,21 +34,44 @@ $task_font_color: white;
 
 #sortable li span {
   position: absolute;
-  margin-left: -1.3em;
 }
 
+// task forms
+
+#task_content {
+  width: 350px;
+  height: 35px;
+
+  margin-left: 40px;
+  margin-top: 3px;
+
+
+  border: none;
+  color: $task_font_color;
+  font-family: $font;
+  font-weight: $font_weight_task;
+  font-size: 25px;
+  background-color: $background_color;
+}
 // task icons
 
 .task_text {
   float: left;
-  width: 72%;
+  width: 83%;
 }
 
 .task_check,
 .task_delete {
   height: 100%;
-  width: 8%;
   display: inline-block;
+}
+
+.task_check {
+  width: 40px;
+}
+
+.task_delete {
+  width: 25px;
 }
 
 .check_icon,

@@ -5,13 +5,15 @@ $active_list_width: 500px;
 $active_list_height: 500px;
 
 $card_background_color: rgba(236, 240, 241,1.0);
+$body_background_color: rgba(189, 195, 199,1.0);
 
+body {
+  background-color: $body_background_color;
+  overflow: hidden;
+}
 #week {
-  width: 1097px;
-  height: 500px;
-  position: relative;
-  margin: 30px;
-  margin-right: 30px;
+  width: 1200px;
+  height: 1000px;
 }
 
 #week div.day {
@@ -20,7 +22,6 @@ $card_background_color: rgba(236, 240, 241,1.0);
   position: absolute;
   background-color: $card_background_color;
   border-radius: 7px;
-  // overflow: hidden; Maybe keep this. ****************
 }
 
 #week div.active {
@@ -32,106 +33,106 @@ $card_background_color: rgba(236, 240, 241,1.0);
 
 // tuesday
 .tuesday #tuesday {
-  left: 202px;
+  left: 232px;
 }
 .tuesday #wednesday {
-  left: 0px;
+  left: 30px;
 }
 
 // wednesday
 .wednesday #tuesday {
-  left: 0px;
-  top: 260px;
+  left: 30px;
+  top: 290px;
 }
 .wednesday #wednesday {
-  top: 0px;
-  left: 202px;
+  top: 30px;
+  left: 232px;
 }
 
 // thursday
 .thursday #tuesday {
-  left: 0px;
-  top: 260px;
+  left: 30px;
+  top: 290px;
 }
 .thursday #wednesday {
-  left: 202px;
-  top: 0px;
+  left: 232px;
+  top: 30px;
 }
 .thursday #thursday {
-  left: 404px;
+  left: 434px;
 }
 .thursday #friday {
-  left: 202px;
-  top: 260px;
+  left: 232px;
+  top: 290px;
 }
 
 // friday
 .friday #tuesday {
-  left: 0px;
-  top: 260px;
+  left: 30px;
+  top: 290px;
 }
 .friday #wednesday {
-  left: 202px;
-  top: 0px;
+  left: 232px;
+  top: 30px;
 }
 .friday #thursday {
-  left: 202px;
-  top: 260px;
+  left: 232px;
+  top: 290px;
 }
 .friday #friday {
-  left: 404px;
-  top: 0px;
+  left: 434px;
+  top: 30px;
 }
 
 // saturday
 .saturday #tuesday {
-  left: 0px;
-  top: 260px;
+  left: 30px;
+  top: 290px;
 }
 .saturday #wednesday {
-  left: 202px;
-  top: 0px;
+  left: 232px;
+  top: 30px;
 }
 .saturday #thursday {
-  left: 202px;
-  top: 260px;
+  left: 232px;
+  top: 290px;
 }
 .saturday #friday {
-  left: 404px;
-  top: 0px;
+  left: 434px;
+  top: 30px;
 }
 .saturday #saturday {
-  left: 606px;
+  left: 636px;
 }
 .saturday #sunday {
-  left: 404px;
-  top: 260px;
+  left: 434px;
+  top: 290px;
 }
 
 // sunday
 .sunday #tuesday {
-  left: 0px;
-  top: 260px;
+  left: 30px;
+  top: 290px;
 }
 .sunday #wednesday {
-  left: 202px;
-  top: 0px;
+  left: 232px;
+  top: 30px;
 }
 .sunday #thursday {
-  left: 202px;
-  top: 260px;
+  left: 232px;
+  top: 290px;
 }
 .sunday #friday {
-  left: 404px;
-  top: 0px;
+  left: 434px;
+  top: 30px;
 }
 .sunday #saturday {
-  left: 404px;
-  top: 260px;
+  left: 434px;
+  top: 290px;
 }
 .sunday #sunday {
-  left: 606px;
-  top: 0px;
+  left: 636px;
+  top: 30px;
 }
 
 

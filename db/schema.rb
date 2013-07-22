@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716224516) do
+ActiveRecord::Schema.define(:version => 20130721214606) do
 
   create_table "lists", :force => true do |t|
     t.integer  "user_id"
@@ -25,17 +25,17 @@ ActiveRecord::Schema.define(:version => 20130716224516) do
     t.text     "content"
     t.integer  "order_num"
     t.date     "due_date"
-    t.boolean  "is_completed?"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.boolean  "is_completed"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|
     t.string   "username"
     t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
 end

@@ -1,9 +1,9 @@
-$(document).ready(function() {
-  $(function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
-  });
-});
+// $(document).ready(function() {
+//   $(function() {
+//     $( "#sortable" ).sortable();
+//     $( "#sortable" ).disableSelection();
+//   });
+// });
 
 
 

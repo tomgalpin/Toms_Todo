@@ -1,29 +1,36 @@
 $(document).ready(function(){
 
-  var container = $('#week');
+  window.container = $('#week');
   var days = $('.day');
-  var card_class = $('.day').children(':first');
+  window.card_class = $('.day').children(':first');
   var flip_icon = $('#flip_icon');
   var flip_back_icon = $('#flip_back_icon');
 
   // show flip_icon button
-  var show_button = function(this_div) {
-    $(this_div).prepend(flip_icon);
-  };
-
-  // add class 'flipped' to card (flips div)
-  // var flip_card = function() {
-    $("body").on('click', "#flip_icon", function(){
-              card_class.addClass('flipped');
-      });
+  // var show_button = function(this_div) {
+  //   $(this_div).prepend(flip_icon);
   // };
 
-  // remove class 'flipped' to card to flip back
-  var flip_back_card = function() {
-    container.on('click', "#flip_back_icon", function() {
-      card_class.removeClass('flipped');
-    });
+  // add class 'flipped' to card (flips div)
+
+  window.initialize_flipcard = function() {
+    $("body").off('click');
+    $("body").on('click', "#flip_icon", function(){
+        card_class.addClass('flipped');
+      });
+
+    // remove class 'flipped' to card to flip back
+      container.off('click');
+      container.on('click', "#flip_back_icon", function() {
+        card_class.removeClass('flipped');
+      });
+
+      $( "#sortable" ).sortable();
+      $( "#sortable" ).disableSelection();
+
   };
+
+  window.initialize_flipcard();
 
   // 'previous_day' passed in from controller
   // renders the form partial 'big_list'
@@ -51,18 +58,11 @@ $(document).ready(function(){
 
       // 1) remove the day class from week
       container.removeClass().addClass(day_id);
-      // 2) remove the active class from any days that have it
-      days.removeClass('active');
-      // 3) add the active class to the one that was just clicked
-
-      day_div.addClass('active');
-
       // call ajax to render forms:
+      render_forms(day_div, previous_active_day);
 
 
-      render_forms(day_div, previous_active_day)
     }
-
 
   };
 

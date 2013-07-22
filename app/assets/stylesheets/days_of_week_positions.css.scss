@@ -1,34 +1,38 @@
+$top1: 30px;
+$left1: 30px;
+
 #monday {
-  top: 0px;
-  left: 0px;
+  top: $top1;
+  left: $left1;
 }
 
 #tuesday {
-  top: 0px;
-  left: 520px;
+  top: $top1;
+  left: 550px;
 }
 
 #wednesday {
-  top: 260px;
-  left: 520px;
+  top: 290px;
+  left: 550px;
 }
 
 #thursday {
-  top: 0px;
-  left: 722px;
+  top: $top1;
+  left: 752px;
 }
 
 #friday {
-  top: 260px;
-  left: 722px;
+  top: 290px;
+  left: 752px;
 }
 
 #saturday {
-  top: 0px;
-  left: 924px;
+  top: $top1;
+  left: 954px;
 }
 
 #sunday {
-  top: 260px;
-  left: 924px;
+  top: 290px;
+  left: 954px;
 }
+
