@@ -12,7 +12,6 @@ body {
   overflow: hidden;
 }
 
-
 #week {
   width: 1200px;
   height: 1000px;
@@ -22,7 +21,7 @@ body {
   width: $list_width;
   height: $list_height;
   position: absolute;
-  background-color: $card_background_color;
+  background-color: $body_background_color;
   border-radius: 7px;
 }
 
@@ -136,6 +135,9 @@ body {
   left: 636px;
   top: 30px;
 }
+
+
+
 
 
 

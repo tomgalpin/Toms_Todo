@@ -1,0 +1,100 @@
+// jony themed
+
+$body_bg_color: #FEEECD;
+$banner_color: rgba(52, 73, 94,1.0);
+$list_color: rgba(52, 73, 94,1.0);
+$list_opacity: 0.5;
+
+
+body.jony {
+  background-color: $body_bg_color;
+  #week div.day {
+    background-color: $body_bg_color; // keep same color as body
+    // opacity: $body_bg_opacity;
+    .card {
+      .front {
+        .banner {
+          background-color: $banner_color;
+        }
+        .list_body {
+          ul {
+            li:first-child,
+            li:nth-child(5) {
+              background-color: rgba(26, 188, 156,1.0);
+
+              .task_text {
+                form {
+                  input {
+                    background-color: rgba(26, 188, 156,1.0); // same as li/list
+                    opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+            li:nth-child(2),
+            li:nth-child(6) {
+              background-color: rgba(46, 204, 113,1.0);
+
+              .task_text {
+                form {
+                  input {
+                    background-color: rgba(46, 204, 113,1.0); // same as li/list
+                    opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+            li:nth-child(3),
+            li:nth-child(7) {
+              background-color: rgba(52, 152, 219,1.0);
+
+              .task_text {
+                form {
+                  input {
+                    background-color: rgba(52, 152, 219,1.0); // same as li/list
+                    opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+            li:nth-child(4),
+            li:nth-child(8) {
+              background-color: #E5399E;
+
+              .task_text {
+                form {
+                  input {
+                    background-color: #E5399E; // same as li/list
+                    opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .list_footer {
+          background-color: $banner_color;
+        }
+        #small_banner {
+          background-color: $banner_color;
+        }
+        #small_body {
+          li:first-child,
+          li:nth-child(5), {
+            background-color: rgba(26, 188, 156,1.0);
+          }
+          li:nth-child(2) {
+            background-color: rgba(46, 204, 113,1.0);
+          }
+          li:nth-child(3) {
+            background-color: rgba(52, 152, 219,1.0);
+          }
+          li:nth-child(4) {
+            background-color: #E5399E;
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+// gray themed
+
+$body_bg_color: #FEFEF2;
+$banner_color: rgba(44, 62, 80,1.0);
+$list_color: rgba(127, 140, 141,1.0);
+$list_opacity: 0.5;
+
+
+body.gray {
+  background-color: $body_bg_color;
+  #week div.day {
+    background-color: $body_bg_color; // keep same color as body
+    // opacity: $body_bg_opacity;
+    .card {
+      .front {
+        .banner {
+          background-color: $banner_color;
+
+        }
+        .list_body {
+          ul {
+            li {
+              background-color: $list_color;
+
+
+              // opacity: $list_opacity;
+              .task_text {
+                form {
+                  input {
+                    background-color: $list_color; // same as li/list
+                    // opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .list_footer {
+          background-color: $banner_color;
+        }
+        #small_banner {
+          background-color: $banner_color;
+
+        }
+        #small_body {
+          li {
+            background-color: $list_color;
+          }
+        }
+      }
+    }
+  }
+}
+

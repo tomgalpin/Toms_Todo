@@ -1,0 +1,52 @@
+// night themed
+
+$body_bg_color: rgba(189, 195, 199,1.0);
+$banner_color: black;
+$list_color: rgba(52, 73, 94,1.0);
+$list_opacity: 0.5;
+
+
+body.black {
+  background-color: $body_bg_color;
+  #week div.day {
+    background-color: $body_bg_color; // keep same color as body
+    // opacity: $body_bg_opacity;
+    .card {
+      .front {
+        .banner {
+          background-color: $banner_color;
+        }
+        .list_body {
+          ul {
+            li {
+              background-color: $list_color;
+
+              .task_text {
+                form {
+                  input {
+                    background-color: $list_color; // same as li/list
+                    opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .list_footer {
+          background-color: rgba(142, 68, 173,1.0);
+        }
+        #small_banner {
+          background-color: $banner_color;
+        }
+        #small_body {
+          li {
+            background-color: $list_color;
+
+
+          }
+        }
+      }
+    }
+  }
+}
+

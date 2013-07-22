@@ -3,10 +3,6 @@ var day = "<%= @selected_day_of_week %>"
 var previous = "<%= @previous_day %>"
 
 
-
-
-
-
 $("#" + day).empty().addClass('active').append('<%= j render :partial => "big_list", :locals => { :day_of_week => @selected_day_of_week.capitalize } %>')
 
 
@@ -21,4 +17,6 @@ window.initialize_flipcard();
   // 2) remove the active class from any days that have it
 
   $('.day').show();
+
+
 

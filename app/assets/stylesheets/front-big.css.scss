@@ -47,14 +47,20 @@ $font_weight_task: 100;
 
 .big_footer_left{
   float: left;
+  height: 40px;
+  margin-left: 20px;
 }
 .big_footer_right {
   float: right;
 }
 
-#flip_icon {
+#flip_icon,
+.add_task_icon {
   height: 18px;
   margin: 12px auto;
-  // opacity: 0.5;
+}
+
+.add_task_icon:hover {
+  opacity: 0.5;
 }
 

@@ -1,0 +1,50 @@
+// red themed
+
+$body_bg_color: #FFFFF2;
+$banner_color: #FD3F49;
+$list_color: #FD7279;
+$list_opacity: 0.5;
+
+
+body.red {
+  background-color: $body_bg_color;
+  #week div.day {
+    background-color: $body_bg_color; // keep same color as body
+    // opacity: $body_bg_opacity;
+    .card {
+      .front {
+        .banner {
+          background-color: $banner_color;
+        }
+        .list_body {
+          ul {
+            li {
+              background-color: $list_color;
+              // opacity: $list_opacity;
+              .task_text {
+                form {
+                  input {
+                    background-color: $list_color; // same as li/list
+                    // opacity: $list_opacity;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .list_footer {
+          background-color: #BC2F36;
+        }
+        #small_banner {
+          background-color: $banner_color;
+        }
+        #small_body {
+          li {
+            background-color: $list_color;
+          }
+        }
+      }
+    }
+  }
+}
+
