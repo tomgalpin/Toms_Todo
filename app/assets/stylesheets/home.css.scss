@@ -33,70 +33,70 @@ $small_width: 182px;
     width: $small_width;
     height: 240px;
     overflow: hidden;
-    .front {
-      height: 100%;
-        .banner {
+    .banner {
+      width: 100%;
+      height: 25%;
+      background-color: $small_banner_background_color;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      line-height: 60px;
+      .day_header {
+        color: $small_banner_font_color;
+        text-align: center;
+        margin: 0px;
+        font-size: 25px;
+        font-family: $small_banner_font;
+        font-weight: 100;
+      }
+    }
+    .list_body {
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      background-color: $card_background_color;
+      border-bottom-right-radius: 7px;
+      border-bottom-left-radius: 7px;
+      .sortable {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 180px;
+        .list {
+          padding: 10px 10px 5px 10px;
           width: 100%;
-          height: 25%;
-          background-color: $small_banner_background_color;
-          border-top-left-radius: 7px;
-          border-top-right-radius: 7px;
-          line-height: 60px;
-          .day_header {
-            color: $small_banner_font_color;
-            text-align: center;
-            margin: 0px;
-            font-size: 25px;
-            font-family: $small_banner_font;
-            font-weight: 100;
-          }
-        }
-        .list_body {
-          width: 100%;
-          height: 180px;
-          overflow: hidden;
-          background-color: $card_background_color;
-          border-bottom-right-radius: 7px;
-          border-bottom-left-radius: 7px;
-          ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            height: 180px;
-            li {
-              padding: 10px 10px 5px 10px;
-              width: 100%;
-              list-style: none;
-              height: 40px;
-              border-bottom: 1px solid gray;
-              .task_text {
-                input {
-                  height: 30px;
-                  line-height: 30px;
-                  background-color: $card_background_color;
-                  width: 150px;
-                  font-size: 18px;
-                  font-weight: 100;
-                }
-              }
-              .task_text:last-child {
-                visibility: hidden;
-              }
-              .task_check,
-              .task_delete,
-              .check_icon,
-              .delete_icon {
-                visibility: hidden;
-              }
+          list-style: none;
+          height: 40px;
+          border-bottom: 1px solid rgba(0,0,0,0.5);;
+          .task_text {
+            float: left;
+            height: 30px;
+            width: 30px;
+            input {
+              height: 30px;
+              border: none;
+              line-height: 30px;
+              background-color: $card_background_color;
+              width: 150px;
+              font-size: 18px;
+              font-weight: 100;
             }
           }
-        }
-        .list_footer {
-          visibility: hidden;
+          .task_text:last-child {
+            visibility: hidden;
+          }
+          .task_check,
+          .task_delete,
+          .check_icon,
+          .delete_icon {
+            visibility: hidden;
+          }
         }
       }
     }
-
+    .list_footer {
+      visibility: hidden;
+    }
+  }
   // when large
   .large {
     position: absolute;

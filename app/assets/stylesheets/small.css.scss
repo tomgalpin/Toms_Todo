@@ -1,0 +1,90 @@
+// $list_width: 182px;
+// $list_height: 240px;
+
+// $active_list_width: 500px;
+// $active_list_height: 500px;
+
+// $body_background_color: rgba(189, 195, 199,1.0);
+// $back_body_background_color: rgba(149, 165, 166,1.0);
+
+// $font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+// $font_weight_header: 100;
+// $font_weight_task: 100;
+
+// $small_banner_background_color: rgba(52, 73, 94,1.0);
+// $small_banner_font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+// $small_banner_font_color: white;
+// $small_task_font_color: white;
+// $card_background_color: rgba(52, 152, 219,1.0);
+// $small_width: 182px;
+
+// // when small
+// .small {
+//   position: absolute;
+//   width: $small_width;
+//   height: 240px;
+//   overflow: hidden;
+//   .banner {
+//     width: 100%;
+//     height: 25%;
+//     background-color: $small_banner_background_color;
+//     border-top-left-radius: 7px;
+//     border-top-right-radius: 7px;
+//     line-height: 60px;
+//     .day_header {
+//       color: $small_banner_font_color;
+//       text-align: center;
+//       margin: 0px;
+//       font-size: 25px;
+//       font-family: $small_banner_font;
+//       font-weight: 100;
+//     }
+//   }
+//   .list_body {
+//     width: 100%;
+//     height: 180px;
+//     overflow: hidden;
+//     background-color: $card_background_color;
+//     border-bottom-right-radius: 7px;
+//     border-bottom-left-radius: 7px;
+//     .sortable {
+//       margin: 0;
+//       padding: 0;
+//       list-style: none;
+//       height: 180px;
+//       .list {
+//         padding: 10px 10px 5px 10px;
+//         width: 100%;
+//         list-style: none;
+//         height: 40px;
+//         border-bottom: 1px solid rgba(0,0,0,0.5);;
+//         .task_text {
+//           float: left;
+//           height: 30px;
+//           width: 30px;
+//           input {
+//             height: 30px;
+//             border: none;
+//             line-height: 30px;
+//             background-color: $card_background_color;
+//             width: 150px;
+//             font-size: 18px;
+//             font-weight: 100;
+//           }
+//         }
+//         .task_text:last-child {
+//           visibility: hidden;
+//         }
+//         .task_check,
+//         .task_delete,
+//         .check_icon,
+//         .delete_icon {
+//           visibility: hidden;
+//         }
+//       }
+//     }
+//   }
+//   .list_footer {
+//     visibility: hidden;
+//   }
+// }
