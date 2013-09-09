@@ -20,6 +20,11 @@ $(document).ready(function(){
     $("body").on('click', ".flip_icon", function(){
        face_front_large.addClass('flipped');
     });
+    // remove class 'flipped' to card to flip back
+    container.off('click');
+    container.on('click', ".flip_back_icon", function() {
+      face_front_large.removeClass('flipped');
+    });
     $( ".sortable" ).sortable();
     $( ".sortable" ).disableSelection();
   };

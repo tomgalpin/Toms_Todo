@@ -8,7 +8,7 @@ $list_opacity: 0.5;
 
 body.black {
   background-color: $body_bg_color;
-  #week div.day {
+  #week  {
     background-color: $body_bg_color; // keep same color as body
     // opacity: $body_bg_opacity;
     .card {
@@ -35,10 +35,10 @@ body.black {
         .list_footer {
           background-color: rgba(142, 68, 173,1.0);
         }
-        #small_banner {
+        .small_banner {
           background-color: $banner_color;
         }
-        #small_body {
+        .small_body {
           li {
             background-color: $list_color;
 
