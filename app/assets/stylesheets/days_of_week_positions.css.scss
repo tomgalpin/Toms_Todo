@@ -1,38 +1,40 @@
-$top1: 30px;
-$left1: 30px;
+// starting positions
 
-#monday {
+$top1: 50px;
+$left1: 60px;
+
+#monday.large {
   top: $top1;
   left: $left1;
 }
 
 #tuesday {
   top: $top1;
-  left: 550px;
+  left: 580px;
 }
 
 #wednesday {
-  top: 290px;
-  left: 550px;
+  top: 310px;
+  left: 580px;
 }
 
 #thursday {
   top: $top1;
-  left: 752px;
+  left: 782px;
 }
 
 #friday {
-  top: 290px;
-  left: 752px;
+  top: 310px;
+  left: 782px;
 }
 
 #saturday {
   top: $top1;
-  left: 954px;
+  left: 984px;
 }
 
 #sunday {
-  top: 290px;
-  left: 954px;
+  top: 310px;
+  left: 984px;
 }
 

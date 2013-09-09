@@ -4,137 +4,408 @@ $list_height: 240px;
 $active_list_width: 500px;
 $active_list_height: 500px;
 
-$card_background_color: rgba(236, 240, 241,1.0);
 $body_background_color: rgba(189, 195, 199,1.0);
+$back_body_background_color: rgba(149, 165, 166,1.0);
 
-body {
-  background-color: $body_background_color;
-  overflow: hidden;
-}
+$font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+$font_weight_header: 100;
+$font_weight_task: 100;
+
+$small_banner_background_color: rgba(52, 73, 94,1.0);
+$small_banner_font: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+$small_banner_font_color: white;
+$small_task_font_color: white;
+$card_background_color: rgba(52, 152, 219,1.0);
+$small_width: 182px;
 
 #week {
-  width: 1200px;
-  height: 1000px;
-}
-
-#week div.day {
-  width: $list_width;
-  height: $list_height;
-  position: absolute;
   background-color: $body_background_color;
-  border-radius: 7px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  // when small
+  .small {
+    position: absolute;
+    width: $small_width;
+    height: 240px;
+    overflow: hidden;
+    .front {
+      height: 100%;
+        .banner {
+          width: 100%;
+          height: 25%;
+          background-color: $small_banner_background_color;
+          border-top-left-radius: 7px;
+          border-top-right-radius: 7px;
+          line-height: 60px;
+          .day_header {
+            color: $small_banner_font_color;
+            text-align: center;
+            margin: 0px;
+            font-size: 25px;
+            font-family: $small_banner_font;
+            font-weight: 100;
+          }
+        }
+        .list_body {
+          width: 100%;
+          height: 180px;
+          overflow: hidden;
+          background-color: $card_background_color;
+          border-bottom-right-radius: 7px;
+          border-bottom-left-radius: 7px;
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 180px;
+            li {
+              padding: 10px 10px 5px 10px;
+              width: 100%;
+              list-style: none;
+              height: 40px;
+              border-bottom: 1px solid gray;
+              .task_text {
+                input {
+                  height: 30px;
+                  line-height: 30px;
+                  background-color: $card_background_color;
+                  width: 150px;
+                  font-size: 18px;
+                  font-weight: 100;
+                }
+              }
+              .task_text:last-child {
+                visibility: hidden;
+              }
+              .task_check,
+              .task_delete,
+              .check_icon,
+              .delete_icon {
+                visibility: hidden;
+              }
+            }
+          }
+        }
+        .list_footer {
+          visibility: hidden;
+        }
+      }
+    }
+
+  // when large
+  .large {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    .banner,
+    .back_banner {
+      width: 100%;
+      height: 80px;
+      margin: 0px;
+      background-color: rgba(52, 73, 94,1.0);
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      line-height: 80px;
+    }
+    .banner h3 {
+      color: white;
+      text-align: center;
+      margin: 0px;
+      font-size: 40px;
+      font-family: $font;
+      font-weight: $font_weight_header;
+    }
+    .list_body {
+      width: 500px;
+      height: 380px;
+      overflow: scroll;
+      .sortable {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .list {
+          width: 500px;
+          height: 53px;
+          line-height: 53px;
+          background-color: $card_background_color;
+          border-radius: 1px;
+          box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+          font-size: 18px;
+          font-family: $font;
+          font-weight: $font_weight_task;
+          .task_text {
+            float: left;
+            height: 30px;
+            width: 350px;
+            margin-left: 40px;
+            input {
+              width: 325px;
+              border: none;
+              font-family: $font;
+              font-weight: $font_weight_task;
+              font-size: 25px;
+              background-color: $card_background_color;
+            }
+          }
+          .task_check,
+          .task_delete {
+            height: 100%;
+            display: inline-block;
+          }
+
+          .task_check {
+            width: 40px;
+            margin-left: 20px;
+            // margin-right: 20px;
+          }
+
+          .task_delete {
+            width: 25px;
+            // margin-right: 20px;
+          }
+
+          .check_icon,
+          .delete_icon {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+    .back_list_body {
+      background-color: $back_body_background_color;
+      width: 100%;
+      height: 380px;
+      .color_theme_div {
+        border: 5px solid rgba(52, 73, 94,1.0);
+        border-radius: 5px;
+        margin: 37px;
+        display: inline-block;
+        width: 85%;
+        height: 75%;
+        background-color:  #34495e;
+        // height: 120px;
+        .choose_color_title_div {
+          font-family: $font;
+          color: white;
+          text-align: center;
+          font-size: 25px;
+        }
+        .color_themes {
+          width: 35%;
+          height: 30px;
+          margin-top: 20px;
+          margin-left: 140px;
+        }
+        .color_button {
+          width: 30px;
+          height: 100%;
+          float: left;
+          background-color: white;
+          display: inline-block;
+        }
+
+        .red_theme_button {
+          background-color: rgba(231, 76, 60,1.0);
+        }
+
+        .red_theme_button:hover {
+          background-color: rgba(192, 57, 43,1.0);
+        }
+
+        .black_theme_button {
+          background-color: black;
+        }
+
+        .black_theme_button:hover {
+          opacity: 0.5;
+        }
+
+        .gray_theme_button {
+          background-color: rgba(189, 195, 199,1.0);
+        }
+
+        .gray_theme_button:hover {
+          background-color: rgba(236, 240, 241,1.0);
+        }
+
+        .jony_ive_theme_button {
+          background-color: #FF00FF;
+        }
+
+        .jony_ive_theme_button:hover {
+          background-color: #9932CD;
+        }
+
+        .color_themes_text {
+          p {
+            color: white;
+            font-family: $font;
+            font-weight: 100;
+            font-size: 20px;
+            display: inline;
+            margin-left: 20px;
+            line-height: 30px;
+          }
+          // margin-top: -19px;
+          // margin-left: 50px;
+        }
+      }
+    }
+    .list_footer,
+    .back_list_footer {
+      width: 100%;
+      height: 40px;
+      background-color: rgba(52, 73, 94,1.0);
+      border-bottom-left-radius: 7px;
+      border-bottom-right-radius: 7px;
+      // opacity: 0.7;
+    }
+    .back_list_footer {
+      // margin-top: 30px;
+    }
+    .big_footer_left,
+    .big_footer_center,
+    .big_footer_right {
+      width: 40px;
+      line-height: 40px;
+    }
+    .big_footer_left{
+      float: left;
+      height: 40px;
+      margin-left: 20px;
+    }
+    .big_footer_right {
+      float: right;
+    }
+    .flip_icon,
+    .add_task_icon {
+      height: 18px;
+      margin: 12px auto;
+    }
+    .flip_back_icon {
+      margin-top: 9px;
+      height: 20px;
+    }
+    .add_task_icon:hover,
+    .flip_icon:hover,
+    .flip_back_icon:hover {
+      opacity: 0.5;
+    }
+
+  }
 }
 
-#week div.active {
-  width: $active_list_width;
-  height: $active_list_height;
-}
 
 // Movements of divs after .active is added (Monday is default);
 
-// tuesday
-.tuesday #tuesday {
-  left: 232px;
-}
-.tuesday #wednesday {
-  left: 30px;
-}
+// // tuesday
+// .tuesday #tuesday {
+//   left: 232px;
+// }
+// .tuesday #wednesday {
+//   left: 30px;
+// }
 
-// wednesday
-.wednesday #tuesday {
-  left: 30px;
-  top: 290px;
-}
-.wednesday #wednesday {
-  top: 30px;
-  left: 232px;
-}
+// // wednesday
+// .wednesday #tuesday {
+//   left: 30px;
+//   top: 290px;
+// }
+// .wednesday #wednesday {
+//   top: 30px;
+//   left: 232px;
+// }
 
-// thursday
-.thursday #tuesday {
-  left: 30px;
-  top: 290px;
-}
-.thursday #wednesday {
-  left: 232px;
-  top: 30px;
-}
-.thursday #thursday {
-  left: 434px;
-}
-.thursday #friday {
-  left: 232px;
-  top: 290px;
-}
+// // thursday
+// .thursday #tuesday {
+//   left: 30px;
+//   top: 290px;
+// }
+// .thursday #wednesday {
+//   left: 232px;
+//   top: 30px;
+// }
+// .thursday #thursday {
+//   left: 434px;
+// }
+// .thursday #friday {
+//   left: 232px;
+//   top: 290px;
+// }
 
-// friday
-.friday #tuesday {
-  left: 30px;
-  top: 290px;
-}
-.friday #wednesday {
-  left: 232px;
-  top: 30px;
-}
-.friday #thursday {
-  left: 232px;
-  top: 290px;
-}
-.friday #friday {
-  left: 434px;
-  top: 30px;
-}
+// // friday
+// .friday #tuesday {
+//   left: 30px;
+//   top: 290px;
+// }
+// .friday #wednesday {
+//   left: 232px;
+//   top: 30px;
+// }
+// .friday #thursday {
+//   left: 232px;
+//   top: 290px;
+// }
+// .friday #friday {
+//   left: 434px;
+//   top: 30px;
+// }
 
-// saturday
-.saturday #tuesday {
-  left: 30px;
-  top: 290px;
-}
-.saturday #wednesday {
-  left: 232px;
-  top: 30px;
-}
-.saturday #thursday {
-  left: 232px;
-  top: 290px;
-}
-.saturday #friday {
-  left: 434px;
-  top: 30px;
-}
-.saturday #saturday {
-  left: 636px;
-}
-.saturday #sunday {
-  left: 434px;
-  top: 290px;
-}
+// // saturday
+// .saturday #tuesday {
+//   left: 30px;
+//   top: 290px;
+// }
+// .saturday #wednesday {
+//   left: 232px;
+//   top: 30px;
+// }
+// .saturday #thursday {
+//   left: 232px;
+//   top: 290px;
+// }
+// .saturday #friday {
+//   left: 434px;
+//   top: 30px;
+// }
+// .saturday #saturday {
+//   left: 636px;
+// }
+// .saturday #sunday {
+//   left: 434px;
+//   top: 290px;
+// }
 
-// sunday
-.sunday #tuesday {
-  left: 30px;
-  top: 290px;
-}
-.sunday #wednesday {
-  left: 232px;
-  top: 30px;
-}
-.sunday #thursday {
-  left: 232px;
-  top: 290px;
-}
-.sunday #friday {
-  left: 434px;
-  top: 30px;
-}
-.sunday #saturday {
-  left: 434px;
-  top: 290px;
-}
-.sunday #sunday {
-  left: 636px;
-  top: 30px;
-}
+// // sunday
+// .sunday #tuesday {
+//   left: 30px;
+//   top: 290px;
+// }
+// .sunday #wednesday {
+//   left: 232px;
+//   top: 30px;
+// }
+// .sunday #thursday {
+//   left: 232px;
+//   top: 290px;
+// }
+// .sunday #friday {
+//   left: 434px;
+//   top: 30px;
+// }
+// .sunday #saturday {
+//   left: 434px;
+//   top: 290px;
+// }
+// .sunday #sunday {
+//   left: 636px;
+//   top: 30px;
+// }
 
 
 
