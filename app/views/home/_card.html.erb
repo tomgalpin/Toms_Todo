@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="face front">
+
+    <div class="banner">
+      <h3 class="day_header"><%= day_of_week %></h3>
+    </div> <!-- class="banner" -->
+
+    <div class="list_body">
+
+        <ul class="sortable">
+          <% 10.times do %>
+            <li class="list ui-state-default">
+
+              <div class="task_text">
+                <%= form_for(@task) do |f| %>
+                <%= f.text_field :content %>
+                <% end %>
+              </div>
+
+              <div class="task_check">
+                <%= image_tag("checkmark_24.png", :class=> "check_icon") %>
+              </div>
+
+              <div class="task_delete">
+                <%= image_tag("delete_24.png", :class=> "delete_icon") %>
+              </div>
+
+            </li>
+          <% end %>
+        </ul>
+
+    </div> <!--"list_body"-->
+
+    <div class="list_footer">
+      <div class="big_footer_left">
+        <%= image_tag("plus_24.png", :class => "add_task_icon") %>
+      </div>
+      <div class="big_footer_center">
+      </div>
+      <div class="big_footer_right">
+        <%= image_tag("info_24.png", :class=> "flip_icon") %>
+      </div>
+
+
+    </div> <!--"list_footer"-->
+  </div> <!-- class="front face" -->
+
+  <div class="face back ">
+    <%= render "back" %>
+  </div> <!-- face back -->
+
+
+</div><!-- .card  -->

@@ -20,7 +20,7 @@ $small_width: 182px;
 
 #week {
   background-color: $body_background_color;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -66,7 +66,7 @@ $small_width: 182px;
           width: 100%;
           list-style: none;
           height: 40px;
-          border-bottom: 1px solid rgba(0,0,0,0.5);;
+          border-bottom: 1px solid rgba(0,0,0,0.5);
           .task_text {
             float: left;
             height: 30px;
@@ -82,21 +82,22 @@ $small_width: 182px;
             }
           }
           .task_text:last-child {
-            visibility: hidden;
+            display: none;
           }
           .task_check,
           .task_delete,
           .check_icon,
           .delete_icon {
-            visibility: hidden;
+            display: none;
           }
         }
       }
     }
     .list_footer {
-      visibility: hidden;
+      display: none;
     }
-  }
+  } // -- end small
+
   // when large
   .large {
     position: absolute;
@@ -124,6 +125,8 @@ $small_width: 182px;
       width: 500px;
       height: 380px;
       overflow: scroll;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
       .sortable {
         margin: 0;
         padding: 0;
@@ -134,7 +137,7 @@ $small_width: 182px;
           line-height: 53px;
           background-color: $card_background_color;
           border-radius: 1px;
-          box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+          border-bottom: 1px solid rgba(0,0,0,0.5);
           font-size: 18px;
           font-family: $font;
           font-weight: $font_weight_task;
@@ -156,6 +159,7 @@ $small_width: 182px;
           .task_delete {
             height: 100%;
             display: inline-block;
+            visibility: visible;
           }
 
           .task_check {
@@ -176,237 +180,161 @@ $small_width: 182px;
         }
       }
     }
-    .back_list_body {
-      background-color: $back_body_background_color;
-      width: 100%;
-      height: 380px;
-      .color_theme_div {
-        border: 5px solid rgba(52, 73, 94,1.0);
-        border-radius: 5px;
-        margin: 37px;
-        display: inline-block;
-        width: 85%;
-        height: 75%;
-        background-color:  #34495e;
-        // height: 120px;
-        .choose_color_title_div {
-          font-family: $font;
-          color: white;
-          text-align: center;
-          font-size: 25px;
-        }
-        .color_themes {
-          width: 35%;
-          height: 30px;
-          margin-top: 20px;
-          margin-left: 140px;
-        }
-        .color_button {
-          width: 30px;
-          height: 100%;
-          float: left;
-          background-color: white;
-          display: inline-block;
-        }
-
-        .red_theme_button {
-          background-color: rgba(231, 76, 60,1.0);
-        }
-
-        .red_theme_button:hover {
-          background-color: rgba(192, 57, 43,1.0);
-        }
-
-        .black_theme_button {
-          background-color: black;
-        }
-
-        .black_theme_button:hover {
-          opacity: 0.5;
-        }
-
-        .gray_theme_button {
-          background-color: rgba(189, 195, 199,1.0);
-        }
-
-        .gray_theme_button:hover {
-          background-color: rgba(236, 240, 241,1.0);
-        }
-
-        .jony_ive_theme_button {
-          background-color: #FF00FF;
-        }
-
-        .jony_ive_theme_button:hover {
-          background-color: #9932CD;
-        }
-
-        .color_themes_text {
-          p {
-            color: white;
-            font-family: $font;
-            font-weight: 100;
-            font-size: 20px;
-            display: inline;
-            margin-left: 20px;
-            line-height: 30px;
-          }
-          // margin-top: -19px;
-          // margin-left: 50px;
-        }
-      }
-    }
-    .list_footer,
-    .back_list_footer {
+    .list_footer {
       width: 100%;
       height: 40px;
       background-color: rgba(52, 73, 94,1.0);
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
-      // opacity: 0.7;
-    }
-    .back_list_footer {
-      margin-top: 11px;
-    }
-    .big_footer_left,
-    .big_footer_center,
-    .big_footer_right {
-      width: 40px;
-      line-height: 40px;
-    }
-    .big_footer_left{
-      float: left;
-      height: 40px;
-      margin-left: 20px;
-    }
-    .big_footer_right {
-      float: right;
-    }
-    .flip_icon,
-    .add_task_icon {
-      height: 18px;
-      margin: 12px auto;
-    }
-    .flip_back_icon {
-      margin-top: 9px;
-      height: 20px;
-    }
-    .add_task_icon:hover,
-    .flip_icon:hover,
-    .flip_back_icon:hover {
-      opacity: 0.5;
+     .big_footer_left,
+     .big_footer_center,
+     .big_footer_right {
+       width: 40px;
+       line-height: 40px;
+     }
+     .big_footer_left{
+       float: left;
+       height: 40px;
+       margin-left: 20px;
+     }
+     .big_footer_right {
+       float: right;
+     }
+     .flip_icon,
+     .add_task_icon {
+       height: 18px;
+       margin: 12px auto;
+     }
+     .add_task_icon:hover,
+     .flip_icon:hover {
+       opacity: 0.5;
+     }
     }
 
+    .back {
+      // visibility: hidden;
+      .back_list_body {
+        background-color: $back_body_background_color;
+        width: 100%;
+        height: 380px;
+        .color_theme_div {
+          border: 5px solid rgba(52, 73, 94,1.0);
+          border-radius: 5px;
+          margin: 37px;
+          display: inline-block;
+          width: 85%;
+          height: 75%;
+          background-color:  #34495e;
+          // height: 120px;
+          .choose_color_title_div {
+            font-family: $font;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+          }
+          .color_themes {
+            width: 35%;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 140px;
+          }
+          .color_button {
+            width: 30px;
+            height: 100%;
+            float: left;
+            background-color: white;
+            display: inline-block;
+          }
+
+          .red_theme_button {
+            background-color: rgba(231, 76, 60,1.0);
+          }
+
+          .red_theme_button:hover {
+            background-color: rgba(192, 57, 43,1.0);
+          }
+
+          .black_theme_button {
+            background-color: black;
+          }
+
+          .black_theme_button:hover {
+            opacity: 0.5;
+          }
+
+          .gray_theme_button {
+            background-color: rgba(189, 195, 199,1.0);
+          }
+
+          .gray_theme_button:hover {
+            background-color: rgba(236, 240, 241,1.0);
+          }
+
+          .jony_ive_theme_button {
+            background-color: #FF00FF;
+          }
+
+          .jony_ive_theme_button:hover {
+            background-color: #9932CD;
+          }
+
+          .color_themes_text {
+            p {
+              color: white;
+              font-family: $font;
+              font-weight: 100;
+              font-size: 20px;
+              display: inline;
+              margin-left: 20px;
+              line-height: 30px;
+            }
+            // margin-top: -19px;
+            // margin-left: 50px;
+          }
+        }
+      }
+      .back_list_footer {
+        width: 100%;
+        height: 40px;
+        background-color: rgba(52, 73, 94,1.0);
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        // opacity: 0.7;
+      }
+      .back_list_footer {
+        margin-top: 11px;
+      }
+      .big_footer_left,
+      .big_footer_center,
+      .big_footer_right {
+        width: 40px;
+        line-height: 40px;
+      }
+      .big_footer_left{
+        float: left;
+        height: 40px;
+        margin-left: 20px;
+      }
+      .big_footer_right {
+        float: right;
+      }
+      .flip_icon,
+      .add_task_icon {
+        height: 18px;
+        margin: 12px auto;
+      }
+      .flip_back_icon {
+        margin-top: 9px;
+        height: 20px;
+      }
+      .add_task_icon:hover,
+      .flip_icon:hover,
+      .flip_back_icon:hover {
+        opacity: 0.5;
+      }
+    }
   }
 }
-
-
-// Movements of divs after .active is added (Monday is default);
-
-// // tuesday
-// .tuesday #tuesday {
-//   left: 232px;
-// }
-// .tuesday #wednesday {
-//   left: 30px;
-// }
-
-// // wednesday
-// .wednesday #tuesday {
-//   left: 30px;
-//   top: 290px;
-// }
-// .wednesday #wednesday {
-//   top: 30px;
-//   left: 232px;
-// }
-
-// // thursday
-// .thursday #tuesday {
-//   left: 30px;
-//   top: 290px;
-// }
-// .thursday #wednesday {
-//   left: 232px;
-//   top: 30px;
-// }
-// .thursday #thursday {
-//   left: 434px;
-// }
-// .thursday #friday {
-//   left: 232px;
-//   top: 290px;
-// }
-
-// // friday
-// .friday #tuesday {
-//   left: 30px;
-//   top: 290px;
-// }
-// .friday #wednesday {
-//   left: 232px;
-//   top: 30px;
-// }
-// .friday #thursday {
-//   left: 232px;
-//   top: 290px;
-// }
-// .friday #friday {
-//   left: 434px;
-//   top: 30px;
-// }
-
-// // saturday
-// .saturday #tuesday {
-//   left: 30px;
-//   top: 290px;
-// }
-// .saturday #wednesday {
-//   left: 232px;
-//   top: 30px;
-// }
-// .saturday #thursday {
-//   left: 232px;
-//   top: 290px;
-// }
-// .saturday #friday {
-//   left: 434px;
-//   top: 30px;
-// }
-// .saturday #saturday {
-//   left: 636px;
-// }
-// .saturday #sunday {
-//   left: 434px;
-//   top: 290px;
-// }
-
-// // sunday
-// .sunday #tuesday {
-//   left: 30px;
-//   top: 290px;
-// }
-// .sunday #wednesday {
-//   left: 232px;
-//   top: 30px;
-// }
-// .sunday #thursday {
-//   left: 232px;
-//   top: 290px;
-// }
-// .sunday #friday {
-//   left: 434px;
-//   top: 30px;
-// }
-// .sunday #saturday {
-//   left: 434px;
-//   top: 290px;
-// }
-// .sunday #sunday {
-//   left: 636px;
-//   top: 30px;
-// }
-
 
 
 

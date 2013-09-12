@@ -1,40 +1,155 @@
-// starting positions
-
 $top1: 50px;
 $left1: 60px;
 
-#monday.large {
-  top: $top1;
-  left: $left1;
+// monday--starting positions
+#week.mondayPos {
+  #monday.large {
+    top: $top1;
+    left: $left1;
+  }
+  #tuesday.small{
+    top: $top1;
+    left: 580px;
+  }
+  #wednesday {
+    top: 310px;
+    left: 580px;
+  }
+
+  #thursday {
+    top: $top1;
+    left: 782px;
+  }
+
+  #friday {
+    top: 310px;
+    left: 782px;
+  }
+
+  #saturday {
+    top: $top1;
+    left: 984px;
+  }
+
+  #sunday {
+    top: 310px;
+    left: 984px;
+  }
 }
 
-#tuesday {
-  top: $top1;
-  left: 580px;
+// tuesday
+#week.tuesdayPos {
+ #tuesday.large {
+  left: 232px;
+ }
+ #wednesday {
+  left: 30px;
+ }
 }
 
-#wednesday {
-  top: 310px;
-  left: 580px;
+// wednesday
+#week.wednesdayPos {
+  #tuesday {
+    left: 30px;
+    top: 290px;
+  }
+  #wednesday.large {
+    top: 30px;
+    left: 232px;
+  }
 }
 
-#thursday {
-  top: $top1;
-  left: 782px;
+// thursday
+#week.thursdayPos  {
+  #tuesday {
+    left: 30px;
+    top: 290px;
+  }
+  #wednesday {
+    left: 232px;
+    top: 30px;
+  }
+  #thursday.large {
+    left: 434px;
+  }
+  #friday {
+    left: 232px;
+    top: 290px;
+  }
 }
 
-#friday {
-  top: 310px;
-  left: 782px;
+// friday
+#week.fridayPos  {
+  #tuesday {
+    left: 30px;
+    top: 290px;
+  }
+  #wednesday {
+    left: 232px;
+    top: 30px;
+  }
+  #thursday {
+      left: 232px;
+      top: 290px;
+  }
+  #friday.large {
+    left: 434px;
+    top: 30px;
+  }
 }
 
-#saturday {
-  top: $top1;
-  left: 984px;
+// saturday
+#week.saturdayPos  {
+  #tuesday {
+    left: 30px;
+    top: 290px;
+  }
+  #wednesday {
+    left: 232px;
+    top: 30px;
+  }
+  #thursday {
+    left: 232px;
+    top: 290px;
+  }
+  #friday {
+    left: 434px;
+    top: 30px;
+  }
+  #saturday.large {
+    left: 636px;
+  }
+  #sunday {
+    left: 434px;
+    top: 290px;
+  }
 }
 
-#sunday {
-  top: 310px;
-  left: 984px;
+// sunday
+#week.sundayPos {
+  #tuesday {
+    left: 30px;
+    top: 290px;
+  }
+  #wednesday {
+    left: 232px;
+    top: 30px;
+  }
+  #thursday {
+    left: 232px;
+    top: 290px;
+  }
+  #friday {
+    left: 434px;
+    top: 30px;
+  }
+  #saturday {
+    left: 434px;
+    top: 290px;
+  }
+  #sunday.large {
+    left: 636px;
+    top: 30px;
+  }
 }
 

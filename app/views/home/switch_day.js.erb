@@ -1,22 +1,22 @@
-$('.day').removeClass('active');
-var day = "<%= @selected_day_of_week %>"
-var previous = "<%= @previous_day %>"
+// $('.day').removeClass('active');
+// var day = "<%= @selected_day_of_week %>"
+// var previous = "<%= @previous_day %>"
 
 
-$("#" + day).empty().addClass('active').append('<%= j render :partial => "big_list", :locals => { :day_of_week => @selected_day_of_week.capitalize } %>')
+// $("#" + day).empty().addClass('active').append('<%= j render :partial => "big_list", :locals => { :day_of_week => @selected_day_of_week.capitalize } %>')
 
 
 
-$("#" + previous).empty().append('<%= j render :partial => "small_list", :locals => { :day_of_week => @previous_day.capitalize } %>')
+// $("#" + previous).empty().append('<%= j render :partial => "small_list", :locals => { :day_of_week => @previous_day.capitalize } %>')
 
 
-window.container = $('#week');
-window.card_class = $("#" + day).children(':first');
-window.initialize_flipcard();
+// window.container = $('#week');
+// window.card_class = $("#" + day).children(':first');
+// window.initialize_flipcard();
 
-  // 2) remove the active class from any days that have it
+//   // 2) remove the active class from any days that have it
 
-  $('.day').show();
+//   $('.day').show();
 
 
 

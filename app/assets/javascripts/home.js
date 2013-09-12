@@ -1,7 +1,6 @@
 $(document).ready(function(){
   container = $('#week');
   var large = $('.large');
-  var face_front_large = large.children(':first');
   //card_class = $('.day').children(':first');
   var flip_icon = $('.flip_icon');
   var flip_back_icon = $('.flip_back_icon');
@@ -18,12 +17,12 @@ $(document).ready(function(){
   var initialize_flipcard = function() {
     $("body").off('click');
     $("body").on('click', ".flip_icon", function(){
-       face_front_large.addClass('flipped');
+        $('.large').children(':first').addClass('flipped');
     });
     // remove class 'flipped' to card to flip back
     container.off('click');
-    container.on('click', ".flip_back_icon", function() {
-      face_front_large.removeClass('flipped');
+    container.on('click', ".flip_back_icon", function(){
+        $('.large').children(':first').removeClass('flipped');
     });
     $( ".sortable" ).sortable();
     $( ".sortable" ).disableSelection();
@@ -32,66 +31,41 @@ $(document).ready(function(){
   initialize_flipcard();
 
 
-  // var initialize_flipcard = function() {
 
-  //   $("body").off('click');
-  //   $("body").on('click', ".flip_icon", function(){
-  //       card_class.addClass('flipped');
-  //     });
+  // change_day function:
+  //  on 'click' of day, remove class from 'week' and add 'class' of that day to 'week'
+  // remove the class 'large' from anywhere on the body, except for the current day if it si the same click
+  // add class 'large' to current day
+  // add class 'small' to previous 'large' day
 
-  //   // remove class 'flipped' to card to flip back
-  //     container.off('click');
-  //     container.on('click', ".flip_back_icon", function() {
-  //       card_class.removeClass('flipped');
-  //     });
+  var change_day = function() {
+    var body = $('body');
 
-  //     $( ".sortable" ).sortable();
-  //     $( ".sortable" ).disableSelection();
+    var dayOnclick = function(){
+      $('.flipped').removeClass('flipped');
+      $('#week').removeClass();
+      $('#week').addClass(
+        $(this).attr('id') + 'Pos'
+      );
+      $('.day').removeClass('large');
+      $('.day').removeClass('small');
+      $('.day').addClass('small');
+      $(this).removeClass('small');
+      $(this).addClass('large');
+    };
+    ['monday',
+     'tuesday',
+     'wednesday',
+     'thursday',
+     'friday',
+     'saturday',
+     'sunday'
+    ].forEach(function(day){
+      $('#' + day).on('click', dayOnclick);
+    });
+  };
 
-  // };
-
-
-
-  // 'previous_day' passed in from controller
-  // renders the form partial 'big_list'
-  // var render_forms = function(this_div, previous_day) {
-  //   var day_id = $(this_div).attr('id');
-  //   var settings = {
-  //     type: "post",
-  //     dataType: "script",
-  //     url: "/switch_day",
-  //     data: { selected_day_of_week: day_id,
-  //       previous_day_of_week: previous_day
-  //     }
-  //   };
-  //   $.ajax(settings);
-  // };
-
-  // // from click change days
-  // var day_changer = function() {
-  //   var day_div = $(this);
-
-  //   if(day_div.hasClass("active") === false) {
-  //     var day_id = day_div.attr('id');
-
-  //     var previous_active_day = $('.active').attr('id');
-
-  //     // 1) remove the day class from week
-  //     container.removeClass().addClass(day_id);
-  //     // call ajax to render forms:
-  //     render_forms(day_div, previous_active_day);
-
-
-  //   }
-
-  // };
-
-  // // initialize
-  // var initialize = function() {
-  //   for (i=0; i<=days.length; i++) {
-  //     $(days[i]).on('click', day_changer);
-  //   }
-  // };
+  change_day();
 
   // initialize();
 
@@ -116,8 +90,6 @@ $(document).ready(function(){
   };
 
   text_submission();
-
-
 
   // click on a checkmark and add a strike_through on the text in the form
   // then append it to the list of tasks
