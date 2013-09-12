@@ -11,6 +11,7 @@ $(document).ready(function(){
   var black_icon = $('.black_theme_button');
   var gray_icon = $('.gray_theme_button');
   var jony_icon = $('.jony_ive_theme_button');
+  var blue_icon = $('.blue_theme_button');
   var focused;
 
   // add class 'flipped' to card (flips div)
@@ -159,9 +160,16 @@ $(document).ready(function(){
     });
   };
 
+  var blue_theme = function() {
+    blue_icon.on('click', function() {
+      $('body').removeClass();
+    });
+  };
+
   red_theme();
   gray_theme();
   black_theme();
   jony_theme();
+  blue_theme();
 
 }); // end

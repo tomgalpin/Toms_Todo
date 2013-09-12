@@ -220,17 +220,19 @@ $small_width: 182px;
         .color_theme_div {
           border: 5px solid rgba(52, 73, 94,1.0);
           border-radius: 5px;
-          margin: 37px;
+          margin-top: 20px;
+          margin-left: 32px;
+          margin-bottom: 9px;
           display: inline-block;
           width: 85%;
-          height: 75%;
+          height: 87%;
           background-color:  #34495e;
           // height: 120px;
           .choose_color_title_div {
             font-family: $font;
             color: white;
             text-align: center;
-            font-size: 25px;
+            font-size: 20px;
           }
           .color_themes {
             width: 35%;
@@ -251,7 +253,7 @@ $small_width: 182px;
           }
 
           .red_theme_button:hover {
-            background-color: rgba(192, 57, 43,1.0);
+            background-color: #9b59b6;
           }
 
           .black_theme_button {
@@ -259,7 +261,7 @@ $small_width: 182px;
           }
 
           .black_theme_button:hover {
-            opacity: 0.5;
+            background-color: #7f8c8d;
           }
 
           .gray_theme_button {
@@ -267,7 +269,7 @@ $small_width: 182px;
           }
 
           .gray_theme_button:hover {
-            background-color: rgba(236, 240, 241,1.0);
+            opacity: 0.4;
           }
 
           .jony_ive_theme_button {
@@ -277,13 +279,20 @@ $small_width: 182px;
           .jony_ive_theme_button:hover {
             background-color: #9932CD;
           }
+          .blue_theme_button {
+            background-color: #3498db;
+          }
+
+          .blue_theme_button:hover {
+            background-color: #2980b9;
+          }
 
           .color_themes_text {
             p {
               color: white;
               font-family: $font;
               font-weight: 100;
-              font-size: 20px;
+              font-size: 18px;
               display: inline;
               margin-left: 20px;
               line-height: 30px;
